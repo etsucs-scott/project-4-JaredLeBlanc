@@ -1,5 +1,4 @@
 <Solution>
-  <Project Path="Skyjo.Console/Skyjo.Console.csproj" />
   <Project Path="Skyjo.Core/Skyjo.Core.csproj" Id="b5653417-6160-4121-8f7a-1bc531029986" />
   <Project Path="Skyjo.Tests/Skyjo.Tests.csproj" Id="97230497-22d0-42c7-9ed0-ee1f91f6057f" />
 </Solution>
