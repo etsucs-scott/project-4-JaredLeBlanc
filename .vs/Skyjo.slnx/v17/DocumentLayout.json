@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|c:\\users\\jerbe\\source\\repos\\project-4-jaredleblanc\\skyjoavaloniaapp\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|solutionrelative:skyjoavaloniaapp\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|c:\\users\\jerbe\\source\\repos\\project-4-jaredleblanc\\skyjoavaloniaapp\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|solutionrelative:skyjoavaloniaapp\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +31,31 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "SkyjoAvaloniaApp\\MainWindow.axaml",
+              "ToolTip": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\MainWindow.axaml",
+              "RelativeToolTip": "SkyjoAvaloniaApp\\MainWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-27T18:13:18.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\MainWindow.axaml.cs",
+              "RelativeDocumentMoniker": "SkyjoAvaloniaApp\\MainWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\MainWindow.axaml.cs",
+              "RelativeToolTip": "SkyjoAvaloniaApp\\MainWindow.axaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T18:13:10.122Z",
+              "EditorCaption": ""
             }
           ]
         }
