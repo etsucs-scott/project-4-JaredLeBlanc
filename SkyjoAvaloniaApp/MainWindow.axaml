@@ -87,8 +87,8 @@
         <!-- Buttons -->
         <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
             <Button Content="End Turn" Click="EndTurn_Click"/>
-            <Button Content="Save" Click="Save_Click"/>
-            <Button Content="Load" Click="Load_Click"/>
+           <!-- <Button Content="Save" Click="Save_Click"/> -->
+           <!-- <Button Content="Load" Click="Load_Click"/> -->
         </StackPanel>
 
         <TextBlock Text="{Binding StatusMessage}"

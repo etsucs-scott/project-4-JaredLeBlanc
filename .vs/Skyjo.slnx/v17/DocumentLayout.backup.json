@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|solutionrelative:skyjoavaloniaapp\\viewmodels\\gameviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|c:\\users\\jerbe\\source\\repos\\project-4-jaredleblanc\\skyjoavaloniaapp\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|solutionrelative:skyjoavaloniaapp\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|c:\\users\\jerbe\\source\\repos\\project-4-jaredleblanc\\skyjoavaloniaapp\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|solutionrelative:skyjoavaloniaapp\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|c:\\users\\jerbe\\source\\repos\\project-4-jaredleblanc\\skyjoavaloniaapp\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|solutionrelative:skyjoavaloniaapp\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|c:\\users\\jerbe\\source\\repos\\project-4-jaredleblanc\\skyjoavaloniaapp\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -64,7 +64,7 @@
               "RelativeDocumentMoniker": "Skyjo.Core\\GameEngine\\GameManager.cs",
               "ToolTip": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\Skyjo.Core\\GameEngine\\GameManager.cs*",
               "RelativeToolTip": "Skyjo.Core\\GameEngine\\GameManager.cs*",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAQwAQBAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAF4BAAAAAAAAAAAkwGwBAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-28T02:10:54.089Z",
               "EditorCaption": ""
@@ -77,14 +77,14 @@
               "RelativeDocumentMoniker": "SkyjoAvaloniaApp\\ViewModels\\GameViewModel.cs",
               "ToolTip": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\ViewModels\\GameViewModel.cs",
               "RelativeToolTip": "SkyjoAvaloniaApp\\ViewModels\\GameViewModel.cs",
-              "ViewState": "AgIAALYAAAAAAAAAAAAowP8AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAwwPcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-28T01:07:13.989Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainWindow.axaml",
               "DocumentMoniker": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\MainWindow.axaml",
               "RelativeDocumentMoniker": "SkyjoAvaloniaApp\\MainWindow.axaml",
@@ -96,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "SkyjoAvaloniaApp\\MainWindow.axaml.cs",

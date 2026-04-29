@@ -165,7 +165,7 @@ namespace Skyjo.Core.GameEngine
                 throw new InvalidOperationException("Game is over.");
 
             if (_hasPlayedThisTurn)
-                throw new InvalidOperationException("End your turn first.");
+                throw new InvalidOperationException("End your turn.");
 
             if (_isSetupPhase)
                 throw new InvalidOperationException("Finish setup first.");
@@ -192,7 +192,7 @@ namespace Skyjo.Core.GameEngine
                 throw new InvalidOperationException("Game is over.");
 
             if (_hasPlayedThisTurn)
-                throw new InvalidOperationException("End your turn first.");
+                throw new InvalidOperationException("End your turn.");
 
             if (_isSetupPhase)
                 throw new InvalidOperationException("Finish setup first.");
@@ -233,7 +233,7 @@ namespace Skyjo.Core.GameEngine
                 throw new InvalidOperationException("Game is over.");
 
             if (_hasPlayedThisTurn)
-                throw new InvalidOperationException("End your turn first.");
+                throw new InvalidOperationException("End your turn.");
 
             if (_currentDrawnCard == null)
                 throw new InvalidOperationException("No card selected.");
@@ -362,13 +362,13 @@ namespace Skyjo.Core.GameEngine
 
             // normal game phase
             if (_hasPlayedThisTurn)
-                throw new InvalidOperationException("End your turn first.");
+                throw new InvalidOperationException("End your turn.");
 
             if (_currentDrawnCard != null)
                 throw new InvalidOperationException("Place or discard first.");
 
             if (_currentDrawnCard == null && !_canFlipAfterDiscard)
-                throw new InvalidOperationException("Must draw or discard first.");
+                throw new InvalidOperationException("Must draw or choose discarded card.");
 
             if (!_canFlipAfterDiscard)
                 throw new InvalidOperationException("You must discard before flipping.");

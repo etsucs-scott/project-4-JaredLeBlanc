@@ -160,6 +160,12 @@ namespace SkyjoAvaloniaApp.ViewModels
             OnPropertyChanged(nameof(StatusMessage));
         }
 
+        private void ClearMessage()
+        {
+            StatusMessage = "";
+            OnPropertyChanged(nameof(StatusMessage));
+        }
+
         private void LoadBoard()
         {
             Board.Clear();
@@ -183,6 +189,7 @@ namespace SkyjoAvaloniaApp.ViewModels
         public void DrawCard()
         {
             _gameManager.DrawCard();
+            ClearMessage();
             LoadBoard();
         }
 
@@ -191,6 +198,8 @@ namespace SkyjoAvaloniaApp.ViewModels
             try
             {
                 _gameManager.EndTurn();
+
+                ClearMessage();
 
                 RefreshUI();
             }
@@ -236,6 +245,7 @@ namespace SkyjoAvaloniaApp.ViewModels
                     _gameManager.FlipCard(cardVm.Row, cardVm.Col);
                 }
 
+                ClearMessage();
                 RefreshUI();
             }
             catch (Exception ex)
