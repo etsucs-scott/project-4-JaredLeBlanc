@@ -164,6 +164,9 @@ namespace Skyjo.Core.GameEngine
             if (_gameOver)
                 throw new InvalidOperationException("Game is over.");
 
+            if (_hasPlayedThisTurn)
+                throw new InvalidOperationException("End your turn first.");
+
             if (_isSetupPhase)
                 throw new InvalidOperationException("Finish setup first.");
 
@@ -187,6 +190,9 @@ namespace Skyjo.Core.GameEngine
         {
             if (_gameOver)
                 throw new InvalidOperationException("Game is over.");
+
+            if (_hasPlayedThisTurn)
+                throw new InvalidOperationException("End your turn first.");
 
             if (_isSetupPhase)
                 throw new InvalidOperationException("Finish setup first.");
@@ -226,6 +232,9 @@ namespace Skyjo.Core.GameEngine
             if (_gameOver)
                 throw new InvalidOperationException("Game is over.");
 
+            if (_hasPlayedThisTurn)
+                throw new InvalidOperationException("End your turn first.");
+
             if (_currentDrawnCard == null)
                 throw new InvalidOperationException("No card selected.");
 
@@ -249,7 +258,7 @@ namespace Skyjo.Core.GameEngine
                 _playerWhoEndedRound = CurrentPlayer;
             }
 
-            EndTurn();
+            //EndTurn();
         }
 
         public GameState ToGameState()
@@ -328,7 +337,7 @@ namespace Skyjo.Core.GameEngine
             if (_gameOver)
                 throw new InvalidOperationException("Game is over.");
 
-            // SETUP PHASE (always allowed)
+            // setup game phase
             if (_isSetupPhase)
             {
                 if (_flippedCount[player] >= 2)
@@ -351,7 +360,10 @@ namespace Skyjo.Core.GameEngine
                 return false;
             }
 
-            // NORMAL GAME (only after setup)
+            // normal game phase
+            if (_hasPlayedThisTurn)
+                throw new InvalidOperationException("End your turn first.");
+
             if (_currentDrawnCard != null)
                 throw new InvalidOperationException("Place or discard first.");
 
@@ -374,7 +386,7 @@ namespace Skyjo.Core.GameEngine
                     _playerWhoEndedRound = CurrentPlayer;
                 }
 
-                EndTurn();
+                //EndTurn();
 
                 return true;
             }
