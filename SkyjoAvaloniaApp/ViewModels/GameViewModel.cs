@@ -40,6 +40,9 @@ namespace SkyjoAvaloniaApp.ViewModels
 
         public int? DiscardTopValue => _gameManager.TopDiscard?.Value;
 
+        public string? Winner => _gameManager.Winner;
+        public bool IsGameOver => _gameManager.IsGameOver;
+
         private void OnPropertyChanged(string name)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
@@ -134,6 +137,21 @@ namespace SkyjoAvaloniaApp.ViewModels
             }
         }
 
+        // winner and score text for when game ends
+        public string WinnerText =>
+            _gameManager.Winner != null
+                ? $"Winner: {_gameManager.Winner}"
+                : "";
+
+        public string ScoreText =>
+            _gameManager.FinalScores == null
+            ? ""
+            : string.Join("\n",
+                _gameManager.FinalScores
+                    .OrderBy(s => s.Value) // lowest first
+                    .Select(s => $"{s.Key}: {s.Value}"));
+
+
         public string? StatusMessage { get; set; }
 
         private void SetMessage(string msg)
@@ -213,6 +231,10 @@ namespace SkyjoAvaloniaApp.ViewModels
                 {
                     _gameManager.ReplaceCard(cardVm.Row, cardVm.Col);
                 }
+                else
+                {
+                    _gameManager.FlipCard(cardVm.Row, cardVm.Col);
+                }
 
                 RefreshUI();
             }
@@ -228,6 +250,11 @@ namespace SkyjoAvaloniaApp.ViewModels
             OnPropertyChanged(nameof(CurrentPlayerName));
             OnPropertyChanged(nameof(DrawnCardValue));
             OnPropertyChanged(nameof(DiscardTopValue));
+
+            OnPropertyChanged(nameof(Winner));
+            OnPropertyChanged(nameof(IsGameOver));
+            OnPropertyChanged(nameof(WinnerText));
+            OnPropertyChanged(nameof(ScoreText));
         }
     }
 }

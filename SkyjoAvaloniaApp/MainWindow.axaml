@@ -16,6 +16,28 @@
             HorizontalAlignment="Center"
             Spacing="40">
 
+                <!-- Drawn Card -->
+                <StackPanel>
+                    <TextBlock Text="Drawn Card" HorizontalAlignment="Center"/>
+                    <Border Width="50" Height="70"
+                            Background="LightGray"
+                            CornerRadius="5">
+                        <TextBlock Text="{Binding DrawnCardValue}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="20"/>
+                    </Border>
+
+                    <!-- Discard button -->
+                    <Button Content="Discard"
+                            HorizontalAlignment="Center"
+                            FontSize="14"
+                            Width="70"
+                            Height="30"
+                            HorizontalContentAlignment="Center"
+                            Command="{Binding DiscardCardCommand}"/>
+                </StackPanel>
+
                 <!-- Draw Pile -->
                 <StackPanel>
                     <TextBlock Text="Draw Pile" HorizontalAlignment="Center"/>
@@ -72,6 +94,29 @@
         <TextBlock Text="{Binding StatusMessage}"
            Foreground="Red"
            HorizontalAlignment="Center"/>
+
+        <StackPanel HorizontalAlignment="Center" Spacing="5">
+
+            <!-- Game Over Title -->
+            <TextBlock Text="GAME OVER"
+                        FontSize="24"
+                        Foreground="Red"
+                        HorizontalAlignment="Center"
+                        IsVisible="{Binding IsGameOver}"/>
+
+            <!-- Winner -->
+            <TextBlock Text="{Binding WinnerText}"
+                        FontSize="18"
+                        Foreground="Green"
+                        HorizontalAlignment="Center"
+                        IsVisible="{Binding IsGameOver}"/>
+
+            <!-- Scores -->
+            <TextBlock Text="{Binding ScoreText}"
+                        HorizontalAlignment="Center"
+                        IsVisible="{Binding IsGameOver}"/>
+
+        </StackPanel>
 
     </StackPanel>
 

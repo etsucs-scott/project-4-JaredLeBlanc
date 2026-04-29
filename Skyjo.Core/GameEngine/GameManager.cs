@@ -45,6 +45,9 @@ namespace Skyjo.Core.GameEngine
         private TurnPhase _phase = TurnPhase.MustDraw;
         public TurnPhase Phase => _phase;
 
+        private bool _canFlipAfterDiscard = false;
+
+
         public GameManager(List<Player> players, Deck deck)
         {
             _players = new Queue<Player>(players);
@@ -63,12 +66,20 @@ namespace Skyjo.Core.GameEngine
             _discardPile.Push(firstCard);
         }
 
+        // for final round(once last card flipped)
+        private bool _isFinalRound = false;
+        private Player? _playerWhoEndedRound = null;
+
+        private bool IsBoardFullyRevealed(Player player)
+        {
+            return player.Board.Values.All(card => card.IsFaceUp);
+        }
+
         public void EndTurn()
         {
             var player = _players.Dequeue();
             _players.Enqueue(player);
 
-            _hasPlayedThisTurn = false;
 
             if (_isSetupPhase)
             {
@@ -79,15 +90,88 @@ namespace Skyjo.Core.GameEngine
                     _isSetupPhase = false;
                 }
             }
+
+            var nextPlayer = CurrentPlayer;
+
+            // if final round is active AND we returned to the player who ended it
+            if (_isFinalRound && nextPlayer == _playerWhoEndedRound)
+            {
+                EndGame();
+            }
+
+            ResetTurnState();
+        }
+
+        private void ResetTurnState()
+        {
+            _hasPlayedThisTurn = false;
             _hasDrawnFromDeck = false;
             _hasTakenDiscard = false;
+            _canFlipAfterDiscard = false;
             _currentDrawnCard = null;
+        }
+
+        public Dictionary<string, int> CalculateScores()
+        {
+            var scores = new Dictionary<string, int>();
+
+            foreach (var player in _players)
+            {
+                int total = player.Board.Values.Sum(card => card.Value);
+                scores[player.Name] = total;
+            }
+
+            return scores;
+        }
+
+        private bool _gameOver = false;
+        public bool IsGameOver => _gameOver;
+
+        public Dictionary<string, int>? FinalScores { get; private set; }
+
+        private void EndGame()
+        {
+            RevealAllCards();
+
+            FinalScores = CalculateScores();
+
+            _gameOver = true;
+        }
+
+        private void RevealAllCards()
+        {
+            foreach (var player in _players)
+            {
+                foreach (var card in player.Board.Values)
+                {
+                    card.IsFaceUp = true;
+                }
+            }
+        }
+
+        public string? Winner
+        {
+            get
+            {
+                if (FinalScores == null) return null;
+
+                return FinalScores.OrderBy(x => x.Value).First().Key;
+            }
         }
 
         public Card DrawCard()
         {
+            if (_gameOver)
+                throw new InvalidOperationException("Game is over.");
+
             if (_isSetupPhase)
                 throw new InvalidOperationException("Finish setup first.");
+
+            if (_currentDrawnCard == null && (_hasDrawnFromDeck || _hasTakenDiscard))
+            {
+                _hasDrawnFromDeck = false;
+                _hasTakenDiscard = false;
+            }
 
             if (_hasDrawnFromDeck || _hasTakenDiscard)
                 throw new InvalidOperationException("Already chose a card.");
@@ -95,12 +179,23 @@ namespace Skyjo.Core.GameEngine
             _currentDrawnCard = _deck.Draw();
             _hasDrawnFromDeck = true;
 
+            Console.WriteLine($"DrawState -> Drawn:{_hasDrawnFromDeck}, Taken:{_hasTakenDiscard}, CardNull:{_currentDrawnCard == null}");
+
             return _currentDrawnCard;
         }
         public Card TakeFromDiscard()
         {
+            if (_gameOver)
+                throw new InvalidOperationException("Game is over.");
+
             if (_isSetupPhase)
                 throw new InvalidOperationException("Finish setup first.");
+
+            if (_currentDrawnCard == null && (_hasDrawnFromDeck || _hasTakenDiscard))
+            {
+                _hasDrawnFromDeck = false;
+                _hasTakenDiscard = false;
+            }
 
             if (_hasDrawnFromDeck || _hasTakenDiscard)
                 throw new InvalidOperationException("Already chose a card.");
@@ -122,10 +217,15 @@ namespace Skyjo.Core.GameEngine
             _discardPile.Push(_currentDrawnCard);
 
             _currentDrawnCard = null;
+
+            _canFlipAfterDiscard = true;
         }
 
         public void ReplaceCard(int row, int col)
         {
+            if (_gameOver)
+                throw new InvalidOperationException("Game is over.");
+
             if (_currentDrawnCard == null)
                 throw new InvalidOperationException("No card selected.");
 
@@ -140,6 +240,16 @@ namespace Skyjo.Core.GameEngine
             _currentDrawnCard.IsFaceUp = true;
 
             _currentDrawnCard = null;
+
+            _hasPlayedThisTurn = true;
+
+            if (!_isFinalRound && IsBoardFullyRevealed(CurrentPlayer))
+            {
+                _isFinalRound = true;
+                _playerWhoEndedRound = CurrentPlayer;
+            }
+
+            EndTurn();
         }
 
         public GameState ToGameState()
@@ -215,6 +325,9 @@ namespace Skyjo.Core.GameEngine
         {
             var player = CurrentPlayer;
 
+            if (_gameOver)
+                throw new InvalidOperationException("Game is over.");
+
             // SETUP PHASE (always allowed)
             if (_isSetupPhase)
             {
@@ -242,12 +355,27 @@ namespace Skyjo.Core.GameEngine
             if (_currentDrawnCard != null)
                 throw new InvalidOperationException("Place or discard first.");
 
-            if (!_hasDrawnFromDeck && !_hasTakenDiscard)
-                throw new InvalidOperationException("Must draw or take discard first.");
+            if (_currentDrawnCard == null && !_canFlipAfterDiscard)
+                throw new InvalidOperationException("Must draw or discard first.");
+
+            if (!_canFlipAfterDiscard)
+                throw new InvalidOperationException("You must discard before flipping.");
 
             if (player.Board.TryGetValue((row, col), out var normalCard) && !normalCard.IsFaceUp)
             {
                 normalCard.IsFaceUp = true;
+
+                _canFlipAfterDiscard = false;
+                _hasPlayedThisTurn = true;
+
+                if (!_isFinalRound && IsBoardFullyRevealed(CurrentPlayer))
+                {
+                    _isFinalRound = true;
+                    _playerWhoEndedRound = CurrentPlayer;
+                }
+
+                EndTurn();
+
                 return true;
             }
 
