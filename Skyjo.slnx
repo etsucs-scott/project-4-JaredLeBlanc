@@ -1,5 +1,9 @@
 <Solution>
   <Project Path="Skyjo.Core/Skyjo.Core.csproj" Id="b5653417-6160-4121-8f7a-1bc531029986" />
-  <Project Path="Skyjo.Tests/Skyjo.Tests.csproj" Id="97230497-22d0-42c7-9ed0-ee1f91f6057f" />
-  <Project Path="SkyjoAvaloniaApp/SkyjoAvaloniaApp.csproj" Id="632289c1-8ac9-4c17-9486-799037042601" />
+  <Project Path="Skyjo.Tests/Skyjo.Tests.csproj" Id="97230497-22d0-42c7-9ed0-ee1f91f6057f">
+    <BuildDependency Project="Skyjo.Core/Skyjo.Core.csproj" />
+  </Project>
+  <Project Path="SkyjoAvaloniaApp/SkyjoAvaloniaApp.csproj" Id="632289c1-8ac9-4c17-9486-799037042601">
+    <BuildDependency Project="Skyjo.Core/Skyjo.Core.csproj" />
+  </Project>
 </Solution>

@@ -18,4 +18,8 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Skyjo.Core\Skyjo.Core.csproj" />
+  </ItemGroup>
+
 </Project>
