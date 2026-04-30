@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B5653417-6160-4121-8F7A-1BC531029986}|Skyjo.Core\\Skyjo.Core.csproj|c:\\users\\jerbe\\source\\repos\\project-4-jaredleblanc\\skyjo.core\\gameengine\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5653417-6160-4121-8F7A-1BC531029986}|Skyjo.Core\\Skyjo.Core.csproj|solutionrelative:skyjo.core\\gameengine\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|c:\\users\\jerbe\\source\\repos\\project-4-jaredleblanc\\skyjoavaloniaapp\\viewmodels\\gameviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|solutionrelative:skyjoavaloniaapp\\viewmodels\\gameviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|c:\\users\\jerbe\\source\\repos\\project-4-jaredleblanc\\skyjoavaloniaapp\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|solutionrelative:skyjoavaloniaapp\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|c:\\users\\jerbe\\source\\repos\\project-4-jaredleblanc\\skyjoavaloniaapp\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|solutionrelative:skyjoavaloniaapp\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|c:\\users\\jerbe\\source\\repos\\project-4-jaredleblanc\\skyjoavaloniaapp\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632289C1-8AC9-4C17-9486-799037042601}|SkyjoAvaloniaApp\\SkyjoAvaloniaApp.csproj|solutionrelative:skyjoavaloniaapp\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5653417-6160-4121-8F7A-1BC531029986}|Skyjo.Core\\Skyjo.Core.csproj|c:\\users\\jerbe\\source\\repos\\project-4-jaredleblanc\\skyjo.core\\gameengine\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5653417-6160-4121-8F7A-1BC531029986}|Skyjo.Core\\Skyjo.Core.csproj|solutionrelative:skyjo.core\\gameengine\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,65 +34,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\Commands\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "SkyjoAvaloniaApp\\Commands\\RelayCommand.cs",
-              "ToolTip": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\Commands\\RelayCommand.cs",
-              "RelativeToolTip": "SkyjoAvaloniaApp\\Commands\\RelayCommand.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T02:52:11.329Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\Skyjo.Core\\GameEngine\\GameManager.cs",
-              "RelativeDocumentMoniker": "Skyjo.Core\\GameEngine\\GameManager.cs",
-              "ToolTip": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\Skyjo.Core\\GameEngine\\GameManager.cs",
-              "RelativeToolTip": "Skyjo.Core\\GameEngine\\GameManager.cs",
-              "ViewState": "AgIAAEwBAAAAAAAAAAA3wKcAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T02:10:54.089Z",
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "SkyjoAvaloniaApp\\MainWindow.axaml",
+              "ToolTip": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\MainWindow.axaml*",
+              "RelativeToolTip": "SkyjoAvaloniaApp\\MainWindow.axaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-30T01:54:23.992Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GameViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\ViewModels\\GameViewModel.cs",
-              "RelativeDocumentMoniker": "SkyjoAvaloniaApp\\ViewModels\\GameViewModel.cs",
-              "ToolTip": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\ViewModels\\GameViewModel.cs",
-              "RelativeToolTip": "SkyjoAvaloniaApp\\ViewModels\\GameViewModel.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAAAwwPcAAAAfAAAAAAAAAA==",
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\Skyjo.Core\\GameEngine\\GameManager.cs",
+              "RelativeDocumentMoniker": "Skyjo.Core\\GameEngine\\GameManager.cs",
+              "ToolTip": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\Skyjo.Core\\GameEngine\\GameManager.cs",
+              "RelativeToolTip": "Skyjo.Core\\GameEngine\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T01:07:13.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.axaml",
-              "DocumentMoniker": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\MainWindow.axaml",
-              "RelativeDocumentMoniker": "SkyjoAvaloniaApp\\MainWindow.axaml",
-              "ToolTip": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\MainWindow.axaml",
-              "RelativeToolTip": "SkyjoAvaloniaApp\\MainWindow.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-28T01:05:55.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\MainWindow.axaml.cs",
-              "RelativeDocumentMoniker": "SkyjoAvaloniaApp\\MainWindow.axaml.cs",
-              "ToolTip": "C:\\Users\\jerbe\\source\\repos\\project-4-JaredLeBlanc\\SkyjoAvaloniaApp\\MainWindow.axaml.cs",
-              "RelativeToolTip": "SkyjoAvaloniaApp\\MainWindow.axaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T02:55:21.812Z",
+              "WhenOpened": "2026-04-30T01:53:41.518Z",
               "EditorCaption": ""
             }
           ]
